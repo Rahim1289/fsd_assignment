@@ -1,0 +1,33 @@
+{% extends 'employees/base.html' %}
+{% block content %}
+<div class="welcome-section text-center">
+    <h1 class="display-4">Welcome to Employee Management System</h1>
+    <p class="lead">Manage your workforce efficiently and effectively</p>
+</div>
+<div class="row justify-content-center mt-5">
+    <div class="col-md-5">
+        <div class="card text-center p-4">
+            <div class="card-body">
+                <i class="fas fa-user-friends fa-3x mb-3 text-primary"></i>
+                <h3>View Employees</h3>
+                <p>Access and manage your current employee database</p>
+                <a href="{% url 'employee_list' %}" class="btn btn-primary">
+                    <i class="fas fa-list me-2"></i>View List
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="card text-center p-4">
+            <div class="card-body">
+                <i class="fas fa-user-plus fa-3x mb-3 text-primary"></i>
+                <h3>Add Employee</h3>
+                <p>Add new employees to your organization</p>
+                <a href="{% url 'add_employee' %}" class="btn btn-primary">
+                    <i class="fas fa-plus me-2"></i>Add New
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
